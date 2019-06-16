@@ -25,7 +25,7 @@ Title.prototype = {
 		var titleText = game.add.text(game.width/2, game.height/2, 'End Runner', {font: 'Helvetica', fontSize: '48px', fill: '#fff'});
 		titleText.anchor.set(0.5);
 
-		var instructText = game.add.text(game.width/2, game.height/2 + 62, 'Use the ARROW keys to dodge baddies! \nCollect Stars and Diamonds!', {font: 'Helvetica', fontSize: '24px', fill: '#fff'});
+		var instructText = game.add.text(game.width/2, game.height/2 + 62, 'Touch the screen to dodge baddies! \nCollect Stars and Diamonds!', {font: 'Helvetica', fontSize: '24px', fill: '#fff'});
 		instructText.anchor.set(0.5);
 
 		var playText = game.add.text(game.width/2, game.height*.8, 'Press UP to Start', {font: 'Helvetica', fontSize: '24px', fill: '#fff'});
