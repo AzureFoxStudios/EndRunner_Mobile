@@ -19,6 +19,8 @@ Title.prototype = {
 
 	create() {
 
+		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+
 		//TITLE SCREEN TEXT
 		var titleText = game.add.text(game.width/2, game.height/2, 'End Runner', {font: 'Helvetica', fontSize: '48px', fill: '#fff'});
 		titleText.anchor.set(0.5);
@@ -33,9 +35,9 @@ Title.prototype = {
 
 	update() {
 		// check for UP input
-		if(game.input.keyboard.justPressed(Phaser.Keyboard.UP)) {
-			game.state.start('Play');
-			newHighScore = false;
-		}
+		if(game.input.activePointer.isDown){
+		game.state.start('Play');
+		newHighScore = false;
+	}
 	}
 };

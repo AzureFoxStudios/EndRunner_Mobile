@@ -13,7 +13,7 @@ create: function(){
 },
 
 update: function(){
-  if(game.input.keyboard.justPressed(Phaser.Keyboard.UP)) {
+  if(game.input.activePointer.isDown) {
     game.state.start('Play');
     newHighScore = false;
   }

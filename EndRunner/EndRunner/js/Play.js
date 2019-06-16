@@ -8,6 +8,9 @@ preload: function() {
 
 create: function() {
 
+
+	game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+
 	//make LR buttons
 	//start at 100% alpha then fade to 0 after 10 seconds
 	//if pointer1 and pointer2 at the same time to jump.
@@ -78,7 +81,7 @@ update: function() {
 		this.player.body.velocity.x = 450;
 	}
 
-	if (this.cursors.up.isDown && this.player.body.touching.down && hitPlatform){
+	if (game.input.activePointer.isDown && this.player.body.touching.down && hitPlatform){
 		this.player.body.velocity.y = -700; //when player jumps when touching ground
 	}
 
@@ -110,7 +113,7 @@ function collectStar(player, star){
       star.kill();
 
       //Play Sound
-			this.pop01 = game.add.audio('pop01', 0.7);
+			this.pop01 = game.add.audio('pop01', 0.5);
       this.pop01.play('', 0, 1, false);
 
       this.score += 10;
@@ -168,8 +171,8 @@ function attemptDiamondSpawn(diamonds){
 function collectDiamond(player, diamond){
 	diamond.kill(); //diamond disappears
 
-	this.ding = game.add.audio('ding', 0.5);
-	this.ding.play('', 0, 1, false);
+	this.ding = game.add.audio('ding', 0.4);
+	this.ding.play('', 0, .4, false);
 
 	this.score += 50; // 50 points for collecting diamond
 	this.scoreText.text = 'Score: ' + this.score; //score is updated
