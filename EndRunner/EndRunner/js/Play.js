@@ -130,6 +130,13 @@ update: function() {
 
 }
 
+function render(){
+game.debug.pointer(game.input.pointer1);
+game.debug.pointer(game.input.pointer2);
+game.debug.pointer(game.input.activePointer);
+}
+
+
 function addTimeScore(context){
 	context.score += 10;
 	context.scoreText.text = 'Score: ' + context.score;
