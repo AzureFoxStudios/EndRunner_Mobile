@@ -110,8 +110,8 @@ function collectStar(player, star){
       star.kill();
 
       //Play Sound
-			this.pop01 = game.add.audio('pop01', 0.7);
-      this.pop01.play('', 0, 1, false);
+			this.pop01 = game.add.audio('pop01', 0.5);
+      this.pop01.play('', 0, 0.5, false);
 
       this.score += 10;
       this.scoreText.text = 'Score: ' + this.score;
@@ -169,7 +169,7 @@ function collectDiamond(player, diamond){
 	diamond.kill(); //diamond disappears
 
 	this.ding = game.add.audio('ding', 0.5);
-	this.ding.play('', 0, 1, false);
+	this.ding.play('', 0, 0.5, false);
 
 	this.score += 50; // 50 points for collecting diamond
 	this.scoreText.text = 'Score: ' + this.score; //score is updated
