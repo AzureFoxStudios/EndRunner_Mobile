@@ -14,7 +14,7 @@ create: function() {
 
 	//music cc0 from https://freesound.org/people/onderwish/sounds/416070/
 	this.music = game.add.audio('music', 0.1);
-	this.music.play('', 0, 1, true);
+	this.music.play('', 0, 0.8, true);
 
 	//place your assets
 
