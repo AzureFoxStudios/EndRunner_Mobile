@@ -75,33 +75,42 @@ update: function() {
 	this.player.body.velocity.x = 0;
 
 	//code assistance from "Nevan"
-	if(game.input.activePointer.x <= game.width * 0.25){
-		this.player.body.velocity.x = -450;
+	// if(game.input.activePointer.x <= game.width * 0.25){
+	// 	this.player.body.velocity.x = -450;
+	// }
+	// else if (game.input.activePointer.x > game.width * 0.25 && game.input.activePointer.x <= game.width * 0.5) {
+	// 	this.player.body.velocity.x = 450;
+	// } else {
+	// 	this.player.body.velocity.y = -700;
+	// }
+
+	//code assistance from "Nevan"
+	if(game.input.pointer1.active) {
+		if (game.input.pointer1.x <= game.width * 0.25){
+			this.player.body.velocity.x = -450;
+		}
+		else if (game.input.pointer1.x > game.width * 0.25 && game.input.pointer1.x <= game.width * 0.5) {
+			this.player.body.velocity.x = 450;
+		}
+		else if (this.player.body.touching.down && hitPlatform) {
+			this.player.body.velocity.y = -700;
+		}
 	}
-	else if (game.input.activePointer.x > game.width * 0.25 && game.input.activePointer.x <= game.width * 0.5) {
-		this.player.body.velocity.x = 450;
-	} else {
-		this.player.body.velocity.y = -700;
+	else {
+		this.player.body.velocity.x = 0;
 	}
 
 	//code assistance from "Nevan"
-	if(game.input.pointer1.x <= game.width * 0.25){
-		this.player.body.velocity.x = -450;
-	}
-	else if (game.input.pointer1.x > game.width * 0.25 && game.input.pointer1.x <= game.width * 0.5) {
-		this.player.body.velocity.x = 450;
-	} else {
-		this.player.body.velocity.y = -700;
-	}
-
-	//code assistance from "Nevan"
-	if(game.input.pointer2.x <= game.width * 0.25){
-		this.player.body.velocity.x = -450;
-	}
-	else if (game.input.pointer2.x > game.width * 0.25 && game.input.pointer2.x <= game.width * 0.5) {
-		this.player.body.velocity.x = 450;
-	} else {
-		this.player.body.velocity.y = -700;
+	if(game.input.pointer2.active) {
+		if (game.input.pointer2.x <= game.width * 0.25) {
+			this.player.body.velocity.x = -450;
+		}
+		else if (game.input.pointer2.x > game.width * 0.25 && game.input.pointer2.x <= game.width * 0.5) {
+			this.player.body.velocity.x = 450;
+		}
+	 	else if (this.player.body.touching.down && hitPlatform) {
+			this.player.body.velocity.y = -700;
+		}
 	}
 
 	// if (this.cursors.left.isDown){
