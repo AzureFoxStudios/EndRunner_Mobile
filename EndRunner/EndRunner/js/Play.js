@@ -113,16 +113,7 @@ update: function() {
 		}
 	}
 
-	// if (this.cursors.left.isDown){
-	// 	this.player.body.velocity.x = -450;
-	// }
-	// else if (this.cursors.right.isDown){
-	// 	this.player.body.velocity.x = 450;
-	// }
 
-	// if (game.input.activePointer.isDown && this.player.body.touching.down && hitPlatform){
-	// 	this.player.body.velocity.y = -700; //when player jumps when touching ground
-	// }
 
 	this.tileBKGD.tilePosition.x -= 8;
 
