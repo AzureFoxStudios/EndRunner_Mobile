@@ -8,13 +8,9 @@ preload: function() {
 
 create: function() {
 
-	//make LR buttons
-	//start at 100% alpha then fade to 0 after 10 seconds
-	//if pointer1 and pointer2 at the same time to jump.
-
 	//music cc0 from https://freesound.org/people/onderwish/sounds/416070/
 	this.music = game.add.audio('music', 0.1);
-	this.music.play('', 0, 0.8, true);
+	this.music.play('', 0, 0.5, true);
 
 	//place your assets
 
